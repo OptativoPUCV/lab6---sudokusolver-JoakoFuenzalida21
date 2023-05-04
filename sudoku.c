@@ -56,7 +56,7 @@ int is_valid(Node* n){
           return 0;
         } 
         else {
-          marks[num] = 1;
+          marcas[num] = 1;
         }
       }
       for (k = 1; k <= 9; k++) {
