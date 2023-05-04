@@ -44,6 +44,47 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  int i, j, k, p;
+  int marcas[10] = {0};
+
+  for(i = 0 ; i < 9 ; i++){
+      for(j = 0 ; j < 9 ; j++){
+        
+        int num = n->sudo[i][j];
+        
+        if (marcas[num] != 0) {
+          return 0;
+        } 
+        else {
+          marks[num] = 1;
+        }
+      }
+      for (k = 1; k <= 9; k++) {
+        marcas[k] = 0;
+      }
+    }
+  
+  for(j = 0 ; j < 9 ; j++){
+      for(i = 0 ; i < 9 ; i++){
+        
+        int num = n->sudo[i][j];
+        
+        if (marcas[num] != 0) {
+          return 0;
+        } 
+        else {
+          marks[num] = 1;
+        }
+      }
+      for (k = 1; k <= 9; k++) {
+        marcas[k] = 0;
+      }
+    }
+  
+
+  
+  
+  
 
     return 1;
 }
