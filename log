@@ -20,3 +20,19 @@ sudoku.c:47:16: error: unused variable ‘p’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 0151211
+Thu 04 May 2023 05:19:33 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:59:11: error: ‘marks’ undeclared (first use in this function); did you mean ‘marcas’?
+   59 |           marks[num] = 1;
+      |           ^~~~~
+      |           marcas
+sudoku.c:59:11: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:47:16: error: unused variable ‘p’ [-Werror=unused-variable]
+   47 |   int i, j, k, p;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+02a23c5
