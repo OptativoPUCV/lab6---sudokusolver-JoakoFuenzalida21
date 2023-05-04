@@ -80,12 +80,24 @@ int is_valid(Node* n){
         marcas[k] = 0;
       }
     }
-  
 
-  
-  
-  
-
+  for (k = 0; k < 9; k++) {
+    for (p = 0; p < 9; p++) {
+      int i = 3 * (k / 3) + (p / 3);
+      int j = 3 * (k % 3) + (p % 3);
+      int num = n->sudo[i][j];
+      if(marcas[num] != 0)
+      {
+        return 0;
+      }
+      else {
+        marcas[num] = 1;
+      }
+    }
+    for (k = 1; k <= 9; k++) {
+        marcas[k] = 0;
+    }
+  }
     return 1;
 }
 
