@@ -126,12 +126,22 @@ Node* DFS(Node* initial, int* cont){
   {
     Node* current = top(pila);
     pop(pila);
+    
     if(is_final(current))
     {
       free(pila);
       return current;
     }
+    List* lista = get_adj_nodes(current);
+    node* aux = first(lista);
     
+    while(aux != NULL)
+    {
+      push(pila, aux);
+      aux = next(lista);
+    }
+    
+    (*cont)++;
       
   }
   return NULL;
