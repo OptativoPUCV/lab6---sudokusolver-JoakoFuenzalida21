@@ -133,7 +133,7 @@ Node* DFS(Node* initial, int* cont){
       return current;
     }
     List* lista = get_adj_nodes(current);
-    node* aux = first(lista);
+    Node* aux = first(lista);
     
     while(aux != NULL)
     {
