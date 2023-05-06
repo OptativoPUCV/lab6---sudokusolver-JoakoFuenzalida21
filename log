@@ -296,3 +296,55 @@ sudoku.c:83:31: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 c988d59
+Sat 06 May 2023 11:23:22 PM UTC: 
+ sudoku.c | 12 ++++--------
+ 1 file changed, 4 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:58:30: error: expected ‘]’ before ‘;’ token
+   58 |       filas[n->sudo[i][j] = 1;
+      |                              ^
+      |                              ]
+sudoku.c:58:12: error: value computed is not used [-Werror=unused-value]
+   58 |       filas[n->sudo[i][j] = 1;
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~
+   59 | 
+      |             
+   60 |       if (n->sudo[i][j] != 0 && columnas[n->sudo[i][j] == 1]) return 0;
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   61 | 
+      |             
+   62 |       columnas[n->sudo[i][j] = 1];
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 | 
+      |             
+   64 |     }
+      |     ~       
+sudoku.c:62:35: error: expected ‘;’ before ‘}’ token
+   62 |       columnas[n->sudo[i][j] = 1];
+      |                                   ^
+      |                                   ;
+   63 | 
+   64 |     }
+      |     ~                              
+sudoku.c:52:9: error: unused variable ‘columnas’ [-Werror=unused-variable]
+   52 |     int columnas[10] = {0,0,0,0,0,0,0,0,0,0};
+      |         ^~~~~~~~
+sudoku.c:79:30: error: expected ‘]’ before ‘;’ token
+   79 |       marca[n->sudo[i][j] = 1;
+      |                              ^
+      |                              ]
+sudoku.c:79:12: error: value computed is not used [-Werror=unused-value]
+   79 |       marca[n->sudo[i][j] = 1;
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~
+   80 |     }
+      |     ~       
+sudoku.c:79:31: error: expected ‘;’ before ‘}’ token
+   79 |       marca[n->sudo[i][j] = 1;
+      |                               ^
+      |                               ;
+   80 |     }
+      |     ~                          
+cc1: all warnings being treated as errors
+Compilation failed
+f298087
