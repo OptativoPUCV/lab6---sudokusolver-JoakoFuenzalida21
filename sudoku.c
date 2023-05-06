@@ -76,15 +76,11 @@ int is_valid(Node* n){
       int i = 3 * (k / 3) + (p / 3);
       int j = 3 * (k % 3) + (p % 3);
       int num = n->sudo[i][j];
-      if (marks[num] != 0) {
+      if (n->sudo[i][j] != 0 && marca[n->sudo[i][j] == 1]) {
         return 0; 
-      } else {
-        marks[num] = 1;
-      }
-    }
-    
-    for (k = 1; k <= 9; k++) {
-      marks[k] = 0;
+      } 
+      
+      marca[n->sudo[i][j] = 1;
     }
   }
 

@@ -181,3 +181,62 @@ sudoku.c:73:9: error: unused variable ‘marca’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bcb45e9
+Sat 06 May 2023 11:22:18 PM UTC: 
+ sudoku.c | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:60:30: error: expected ‘]’ before ‘;’ token
+   60 |       filas[n->sudo[i][j] = 1;
+      |                              ^
+      |                              ]
+sudoku.c:60:12: error: value computed is not used [-Werror=unused-value]
+   60 |       filas[n->sudo[i][j] = 1;
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~
+   61 | 
+      |             
+   62 |       if (n->sudo[i][j] != 0 && columnas[n->sudo[i][j] == 1])
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |       {
+      |       ~     
+   64 |         return 0;
+      |         ~~~~~~~~~
+   65 |       }
+      |       ~     
+   66 |       columnas[n->sudo[i][j] = 1];
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   67 | 
+      |             
+   68 |     }
+      |     ~       
+sudoku.c:66:35: error: expected ‘;’ before ‘}’ token
+   66 |       columnas[n->sudo[i][j] = 1];
+      |                                   ^
+      |                                   ;
+   67 | 
+   68 |     }
+      |     ~                              
+sudoku.c:52:9: error: unused variable ‘columnas’ [-Werror=unused-variable]
+   52 |     int columnas[10] = {0,0,0,0,0,0,0,0,0,0};
+      |         ^~~~~~~~
+sudoku.c:83:30: error: expected ‘]’ before ‘;’ token
+   83 |       marca[n->sudo[i][j] = 1;
+      |                              ^
+      |                              ]
+sudoku.c:83:12: error: value computed is not used [-Werror=unused-value]
+   83 |       marca[n->sudo[i][j] = 1;
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~
+   84 |     }
+      |     ~       
+sudoku.c:83:31: error: expected ‘;’ before ‘}’ token
+   83 |       marca[n->sudo[i][j] = 1;
+      |                               ^
+      |                               ;
+   84 |     }
+      |     ~                          
+sudoku.c:78:11: error: unused variable ‘num’ [-Werror=unused-variable]
+   78 |       int num = n->sudo[i][j];
+      |           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+877d11e
