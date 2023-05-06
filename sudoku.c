@@ -120,6 +120,20 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* pila = createStack();
+  push(pila, initial);
+  while(top(pila) != NULL)
+  {
+    Node* current = top(pila);
+    pop(pila);
+    if(is_final(current))
+    {
+      free(pila);
+      return current;
+    }
+    
+      
+  }
   return NULL;
 }
 
