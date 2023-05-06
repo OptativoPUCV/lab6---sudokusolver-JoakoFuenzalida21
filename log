@@ -77,3 +77,21 @@ sudoku.c:47:13: error: unused variable ‘numColumnas’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 ce2df64
+Sat 06 May 2023 11:06:37 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:61:10: error: ‘k’ undeclared (first use in this function)
+   61 |     for (k = 1; k <= 9; k++) {
+      |          ^
+sudoku.c:61:10: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:84:10: error: ‘p’ undeclared (first use in this function)
+   84 |     for (p = 0; p < 9; p++) {
+      |          ^
+sudoku.c:47:13: error: unused variable ‘numColumnas’ [-Werror=unused-variable]
+   47 |   int i, j, numColumnas, num;
+      |             ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+22e183d
