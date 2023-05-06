@@ -44,11 +44,12 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int i, j, k, p, num;
+  int i, j, k, p;
   int marks[10] = {0,0,0,0,0,0,0,0,0,0};
 
-  
   for (i = 0; i < 9; i++) {
+    int filas[10] = {0};
+    int columnas[10] = {0};
     for (j = 0; j < 9; j++) {
       num = n->sudo[i][j];
       if (marks[num] != 0) {
