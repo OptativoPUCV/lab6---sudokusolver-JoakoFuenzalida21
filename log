@@ -348,3 +348,31 @@ sudoku.c:79:31: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 f298087
+Sat 06 May 2023 11:24:18 PM UTC: 
+ sudoku.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:62:34: error: expected ‘;’ before ‘]’ token
+   62 |       columnas[n->sudo[i][j]] = 1];
+      |                                  ^
+      |                                  ;
+sudoku.c:62:34: error: expected statement before ‘]’ token
+sudoku.c:79:30: error: expected ‘]’ before ‘;’ token
+   79 |       marca[n->sudo[i][j] = 1;
+      |                              ^
+      |                              ]
+sudoku.c:79:12: error: value computed is not used [-Werror=unused-value]
+   79 |       marca[n->sudo[i][j] = 1;
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~
+   80 |     }
+      |     ~       
+sudoku.c:79:31: error: expected ‘;’ before ‘}’ token
+   79 |       marca[n->sudo[i][j] = 1;
+      |                               ^
+      |                               ;
+   80 |     }
+      |     ~                          
+cc1: all warnings being treated as errors
+Compilation failed
+4f174be

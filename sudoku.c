@@ -53,13 +53,13 @@ int is_valid(Node* n){
     
     for (j = 0; j < 9; j++) {
       
-      if (n->sudo[i][j] != 0 && filas[n->sudo[i][j] == 1]) return 0;
+      if (n->sudo[i][j] != 0 && filas[n->sudo[i][j]] == 1) return 0;
      
-      filas[n->sudo[i][j] = 1;
+      filas[n->sudo[i][j]] = 1;
       
-      if (n->sudo[i][j] != 0 && columnas[n->sudo[i][j] == 1]) return 0;
+      if (n->sudo[i][j] != 0 && columnas[n->sudo[i][j]] == 1) return 0;
       
-      columnas[n->sudo[i][j] = 1];
+      columnas[n->sudo[i][j]] = 1];
   
     }
   }
@@ -72,7 +72,7 @@ int is_valid(Node* n){
       int i = 3 * (k / 3) + (p / 3);
       int j = 3 * (k % 3) + (p % 3);
       
-      if (n->sudo[i][j] != 0 && marca[n->sudo[i][j] == 1]) {
+      if (n->sudo[i][j] != 0 && marca[n->sudo[i][j]] == 1) {
         return 0; 
       } 
       
