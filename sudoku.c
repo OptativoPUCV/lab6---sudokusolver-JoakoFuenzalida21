@@ -45,43 +45,33 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   int i, j, k, p;
-  int marks[10] = {0,0,0,0,0,0,0,0,0,0};
 
   for (i = 0; i < 9; i++) {
-    int filas[10] = {0};
-    int columnas[10] = {0};
+    
+    int filas[10] = {0,0,0,0,0,0,0,0,0,0};
+    int columnas[10] = {0,0,0,0,0,0,0,0,0,0};
+    
     for (j = 0; j < 9; j++) {
-      num = n->sudo[i][j];
-      if (marks[num] != 0) {
+      
+      if (n->sudo[i][j] != 0 && filas[n->sudo[i][j] == 1]) 
+      {
         return 0; 
-      } else {
-        marks[num] = 1;
-      }
-    }
-    
-    for (k = 1; k <= 9; k++) {
-      marks[k] = 0;
-    }
-  }
-
+      } 
+      filas[n->sudo[i][j] = 1;
+      
+      if (n->sudo[i][j] != 0 && columnas[n->sudo[i][j] == 1]) 
+      {
+        return 0; 
+      } 
+      columnas[n->sudo[i][j] = 1];
   
-  for (j = 0; j < 9; j++) {
-    for (i = 0; i < 9; i++) {
-      int num = n->sudo[i][j];
-      if (marks[num] != 0) {
-        return 0; 
-      } else {
-        marks[num] = 1;
-      }
-    }
-    
-    for (k = 1; k <= 9; k++) {
-      marks[k] = 0;
     }
   }
-
   
   for (k = 0; k < 9; k++) {
+    
+    int marca[10] = {0,0,0,0,0,0,0,0,0,0};
+    
     for (p = 0; p < 9; p++) {
       int i = 3 * (k / 3) + (p / 3);
       int j = 3 * (k % 3) + (p % 3);

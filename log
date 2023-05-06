@@ -130,3 +130,54 @@ sudoku.c:51:9: error: unused variable ‘filas’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ad38bb8
+Sat 06 May 2023 11:20:29 PM UTC: 
+ sudoku.c | 38 ++++++++++++++------------------------
+ 1 file changed, 14 insertions(+), 24 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:60:30: error: expected ‘]’ before ‘;’ token
+   60 |       filas[n->sudo[i][j] = 1;
+      |                              ^
+      |                              ]
+sudoku.c:60:12: error: value computed is not used [-Werror=unused-value]
+   60 |       filas[n->sudo[i][j] = 1;
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~
+   61 | 
+      |             
+   62 |       if (n->sudo[i][j] != 0 && columnas[n->sudo[i][j] == 1])
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |       {
+      |       ~     
+   64 |         return 0;
+      |         ~~~~~~~~~
+   65 |       }
+      |       ~     
+   66 |       columnas[n->sudo[i][j] = 1];
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   67 | 
+      |             
+   68 |     }
+      |     ~       
+sudoku.c:66:35: error: expected ‘;’ before ‘}’ token
+   66 |       columnas[n->sudo[i][j] = 1];
+      |                                   ^
+      |                                   ;
+   67 | 
+   68 |     }
+      |     ~                              
+sudoku.c:52:9: error: unused variable ‘columnas’ [-Werror=unused-variable]
+   52 |     int columnas[10] = {0,0,0,0,0,0,0,0,0,0};
+      |         ^~~~~~~~
+sudoku.c:79:11: error: ‘marks’ undeclared (first use in this function)
+   79 |       if (marks[num] != 0) {
+      |           ^~~~~
+sudoku.c:79:11: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:78:11: error: variable ‘num’ set but not used [-Werror=unused-but-set-variable]
+   78 |       int num = n->sudo[i][j];
+      |           ^~~
+sudoku.c:73:9: error: unused variable ‘marca’ [-Werror=unused-variable]
+   73 |     int marca[10] = {0,0,0,0,0,0,0,0,0,0};
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bcb45e9
